@@ -2,9 +2,10 @@ import React from 'react';
 import Button from './components/Button/Button';
 import JournalItem from './components/JournalItem/JournalItem';
 import './App.css';
+import CardButton from './components/CardButton/CardButton';
 
 function App() {
-  const data = [
+	const data = [
 		{
 			title: 'Заметка о React #1',
 			date: new Date(),
@@ -23,27 +24,33 @@ function App() {
 	];
 
 	return (
-   <>
-			<h1>Привет тут на React пишем жестко!</h1>
-			<p>Кстати правильный способ не фигачить дивы</p>
-			<JournalItem 
-				title={data[0].title}
-				date={data[0].date}
-				text={data[0].text}
-			/>
-			<JournalItem 
-				title={data[1].title}
-				date={data[1].date} 
-				text={data[1].text}
-			/>
-			<JournalItem 
-				title={data[2].title} 
-				date={data[2].date} 
-				text={data[2].text}
+		<>
+			<CardButton>
+				Новое Дело
+			</CardButton>
+			<CardButton>
+				<JournalItem 
+					title={data[0].title}
+					date={data[0].date}
+					text={data[0].text}
 				/>
-			<Button name="Сохранить" />
-	 </>
-  );
+			</CardButton>
+			<CardButton>
+				<JournalItem 
+					title={data[1].title}
+					date={data[1].date} 
+					text={data[1].text}
+				/>
+			</CardButton>
+			<CardButton>
+				<JournalItem 
+					title={data[2].title} 
+					date={data[2].date} 
+					text={data[2].text}
+				/>
+			</CardButton>
+		</>
+	);
 }
 
 export default App;
