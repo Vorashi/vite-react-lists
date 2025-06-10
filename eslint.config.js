@@ -28,6 +28,8 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+			"semi": ["error", "always", {"omitLastInOneLineBlock": false}],
+			"comma-dangle": ["error", "never"]
     },
   },
 ]
